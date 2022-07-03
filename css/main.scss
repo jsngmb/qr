@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Concert+One&family=Fredoka+One&display=swap');
+
+
+:root {
+    color: #f9f9f9;
+    --DarkCyan: #f9f9f9;
+    --VeryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+    --DarkGrayishBlue: hsl(227, 10%, 46%);
+    --DarkGray: hsl(0, 0%, 59%);
+  }
+  @keyframes MaintransitionIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: all 1s ease;
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+
+    }
+}
+body {
+    margin: 0;
+    font-family: 'Poppins';
+    // background-color: var(--DarkCyan);
+    // overflow: hidden; /* Hide scrollbars */
+    min-height: 100vh;
+    background: url(../images/blob-top-right.svg) left 40vw bottom 55vh no-repeat,
+    url(../images/blob-bottom-right.svg) 40vw 60vh no-repeat,
+    url(../images/blob-top-left.svg) right 40vw bottom 60vh no-repeat,
+    url(../images/blob-top-left.svg) right 40vw top 60vh no-repeat var(--DarkCyan) !important;
+    
+}
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+#preloader {
+    background: white;
+    
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 3;
+    .img-loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    img {
+        animation: spin 2s linear infinite;
+    }
+    }
+}
+main {
+    
+    width: 80% !important;
+    background: rgba(255, 255, 255, 0.17);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.2px);
+    -webkit-backdrop-filter: blur(4.2px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    // background: url(../images/wave.svg) right 0vw bottom 0 no-repeat;
+    nav {
+        a {
+            font-size: 2em !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+    }
+    .container {
+        animation: MaintransitionIn 0.75s;
+        .text-main {
+            
+            margin-top: 2em;
+            
+        h1 {
+            font-family: 'Concert One';
+            font-size: 2.5rem;
+        }
+        p {
+            text-align: justify;
+        }
+        }
+    }
+}
+
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {  
+    body {
+        margin: 0;
+        font-family: 'Poppins';
+        // background-color: var(--DarkCyan);
+        // overflow: hidden; /* Hide scrollbars */
+        min-height: 100vh;
+        background: url(../images/blob-top-right.svg) left 50vw bottom 30vh no-repeat,
+        url(../images/blob-bottom-right.svg) 50vw 50vh no-repeat,
+        url(../images/blob-top-left.svg) right 50vw bottom 40vh no-repeat,
+        url(../images/blob-top-left.svg) right 50vw top 50vh no-repeat var(--DarkCyan) !important;
+    }
+    main {
+        position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {  
+    body {
+        margin: 0;
+        font-family: 'Poppins';
+        // background-color: var(--DarkCyan);
+        // overflow: hidden; /* Hide scrollbars */
+        min-height: 100vh;
+        background: url(../images/blob-top-right.svg) left 60vw bottom 40vh no-repeat,
+        url(../images/blob-bottom-right.svg) 60vw 50vh no-repeat,
+        url(../images/blob-top-left.svg) right 60vw bottom 30vh no-repeat,
+        url(../images/blob-top-left.svg) right 60vw top 50vh no-repeat var(--DarkCyan) !important;
+    }
+    main {           
+        .container {
+            .text-main {
+                margin-top: 5em;
+                
+            h1 {
+                font-family: 'Concert One';
+                font-size: 3rem;
+            }
+            p {
+                text-align: justify;
+            }
+            }
+        }
+    }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {  
+    body {
+        margin: 0;
+        font-family: 'Poppins';
+        // background-color: var(--DarkCyan);
+        // overflow: hidden; /* Hide scrollbars */
+        min-height: 100vh;
+        background: url(../images/blob-top-right.svg) left 70vw bottom 40vh no-repeat,
+        url(../images/blob-bottom-right.svg) 70vw 60vh no-repeat,
+        url(../images/blob-top-left.svg) right 70vw bottom 40vh no-repeat,
+        url(../images/blob-top-left.svg) right 70vw top 60vh no-repeat var(--DarkCyan) !important;
+    }
+    main {           
+        .container {
+            .text-main {
+                margin-top: 5em;
+                
+            h1 {
+                font-family: 'Concert One';
+                font-size: 3.5rem;
+            }
+            }
+        }
+    }
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) { }
